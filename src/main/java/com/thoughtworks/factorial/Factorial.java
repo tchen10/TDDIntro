@@ -16,8 +16,6 @@ public class Factorial {
         if (i < 0) {
             throw new IllegalArgumentException("Must be a positive number.");
         }
-
         return 0;
-
     }
 }
