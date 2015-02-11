@@ -19,14 +19,10 @@ public class FactorialTests {
     private final Factorial factorial = new Factorial();
 
     @Test // Make me pass first
-    public void shouldReturnOneWhenNumberIsOne(){
-        assertThat(new Factorial().compute(1), is(1));
-    }
+    public void shouldReturnOneWhenNumberIsOne(){assertThat(new Factorial().compute(1), is(1));}
 
     @Test
-    public void shouldReturnTwoWhenNumberIsTwo(){
-        assertThat(factorial.compute(2), is(2));
-    }
+    public void shouldReturnTwoWhenNumberIsTwo(){assertThat(factorial.compute(2), is(2));}
 
     @Test
     public void shouldReturnOneWhenNumberIsZero(){
