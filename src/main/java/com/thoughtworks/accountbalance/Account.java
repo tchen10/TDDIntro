@@ -11,7 +11,9 @@ public class Account {
 
     public Integer withdraw (int balance, int withdrawal) {
         this.balance = balance;
-        balance -= withdrawal;
+        if (balance > withdrawal) {
+            balance -= withdrawal;
+        }
         return balance;
     }
 
