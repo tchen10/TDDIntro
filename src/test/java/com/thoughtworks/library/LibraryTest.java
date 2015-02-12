@@ -9,9 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.mockito.Matchers.contains;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 public class LibraryTest {
 
@@ -33,20 +31,34 @@ public class LibraryTest {
         Library library = new Library(books, printStream, null);
 
         library.listBooks();
-
-        // add a verify statement here that shows that the book title was printed by to the printStream
+        verify(printStream).println(title);
     }
 
     @Test
     public void shouldPrintNothingWhenThereAreNoBooks() {
 
-        // implement me
+        List<String> books = new ArrayList<>();
+        books.add("");
+        PrintStream printStream = mock(PrintStream.class);
+        Library library = new Library(books, printStream, null);
+
+        library.listBooks();
+        verify(printStream).println("");
+
     }
 
     @Test
     public void shouldPrintBothBookTitlesWhenThereAreTwoBooks() {
+        List<String> books = new ArrayList<>();
+        books.add("Book One");
+        books.add("Book Two");
+        PrintStream printStream = mock(PrintStream.class);
+        Library library = new Library(books, printStream, null);
 
-        // implement me
+        library.listBooks();
+        for (String book : books) {
+            verify(printStream).println(book);
+        }
     }
 
     /*

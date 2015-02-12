@@ -1,0 +1,7 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<testsuite name="com.thoughtworks.demeter.CarTest" tests="1" failures="0" errors="0" timestamp="2015-02-12T00:13:28" hostname="Tiffanys-MacBook-Pro.local" time="0.271">
+  <properties/>
+  <testcase name="shouldOpenValveWhenAccelerating" classname="com.thoughtworks.demeter.CarTest" time="0.271"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

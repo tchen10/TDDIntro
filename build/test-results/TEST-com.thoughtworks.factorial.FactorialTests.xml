@@ -1,0 +1,11 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<testsuite name="com.thoughtworks.factorial.FactorialTests" tests="5" failures="0" errors="0" timestamp="2015-02-12T00:13:28" hostname="Tiffanys-MacBook-Pro.local" time="0.003">
+  <properties/>
+  <testcase name="shouldThrowIllegalArgumentExceptionWhenNumberIsNegative" classname="com.thoughtworks.factorial.FactorialTests" time="0.0"/>
+  <testcase name="shouldReturnSixWhenNumberIsThree" classname="com.thoughtworks.factorial.FactorialTests" time="0.0"/>
+  <testcase name="shouldReturnOneWhenNumberIsOne" classname="com.thoughtworks.factorial.FactorialTests" time="0.0"/>
+  <testcase name="shouldReturnOneWhenNumberIsZero" classname="com.thoughtworks.factorial.FactorialTests" time="0.0"/>
+  <testcase name="shouldReturnTwoWhenNumberIsTwo" classname="com.thoughtworks.factorial.FactorialTests" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

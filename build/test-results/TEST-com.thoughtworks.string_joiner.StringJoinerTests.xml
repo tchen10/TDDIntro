@@ -1,0 +1,10 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<testsuite name="com.thoughtworks.string_joiner.StringJoinerTests" tests="4" failures="0" errors="0" timestamp="2015-02-12T00:13:28" hostname="Tiffanys-MacBook-Pro.local" time="0.017">
+  <properties/>
+  <testcase name="shouldJoinIntoAnEmptyStringWhenListIsEmpty" classname="com.thoughtworks.string_joiner.StringJoinerTests" time="0.002"/>
+  <testcase name="shouldJoinIntoTheStringWhenListIsOneString" classname="com.thoughtworks.string_joiner.StringJoinerTests" time="0.003"/>
+  <testcase name="shouldContainBothStringsWhenListIsTwoStrings" classname="com.thoughtworks.string_joiner.StringJoinerTests" time="0.009"/>
+  <testcase name="shouldPutDelimiterBetweenStrings" classname="com.thoughtworks.string_joiner.StringJoinerTests" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
