@@ -89,8 +89,8 @@ public class LibraryTest {
         List<String> books = new ArrayList<>();
         PrintStream printStream = mock(PrintStream.class);
         DateTime time = new DateTime();
-        DateTimeFormatter dateTimeFormatter = mock(DateTimeFormatter.class);
 
+        DateTimeFormatter dateTimeFormatter = mock(DateTimeFormatter.class);
         when(dateTimeFormatter.print(time)).thenReturn("FormattedTimeString");
 
         Library library = new Library(books, printStream, dateTimeFormatter);
@@ -102,16 +102,16 @@ public class LibraryTest {
 
     @Test
     public void shouldDisplayFormattedTimeWhenItIsAnEmptyString() {
-//        List<String> books = new ArrayList<>();
-//        PrintStream printStream = mock(PrintStream.class);
-//        DateTime time = new DateTime();
-//        DateTimeFormatter dateTimeFormatter = mock(DateTimeFormatter.class);
-//
-//        when(dateTimeFormatter.print(time)).thenReturn("FormattedTimeString");
-//
-//        Library library = new Library(books, printStream, dateTimeFormatter);
-//        library.welcome(time);
-//
-//        verify(printStream).println(contains("FormattedTimeString"));
+        List<String> books = new ArrayList<>();
+        PrintStream printStream = mock(PrintStream.class);
+        DateTime time = null;
+        DateTimeFormatter dateTimeFormatter = mock(DateTimeFormatter.class);
+
+        when(dateTimeFormatter.print(time)).thenReturn("FormattedTimeString");
+
+        Library library = new Library(books, printStream, dateTimeFormatter);
+        library.welcome(time);
+
+        verify(printStream).println(contains("FormattedTimeString"));
     }
 }
