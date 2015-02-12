@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import java.io.PrintStream;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import static org.mockito.Matchers.contains;
@@ -50,15 +51,13 @@ public class LibraryTest {
     @Test
     public void shouldPrintBothBookTitlesWhenThereAreTwoBooks() {
         List<String> books = new ArrayList<>();
-        books.add("Book One");
-        books.add("Book Two");
+        books.add("Book Title");
+        books.add("Book Title");
         PrintStream printStream = mock(PrintStream.class);
         Library library = new Library(books, printStream, null);
 
         library.listBooks();
-        for (String book : books) {
-            verify(printStream).println(book);
-        }
+        verify(printStream, times(2)).println("Book Title");
     }
 
     /*
@@ -79,7 +78,7 @@ public class LibraryTest {
         // We don't need to mock DateTime because it is a value object
         // We can't mock it because it is a final class
         DateTime time = new DateTime();
-        
+
         library.welcome(time);
         
         verify(printStream).println(contains("Welcome"));
@@ -98,12 +97,21 @@ public class LibraryTest {
 
         library.welcome(time);
 
-        // add a verify here
+        verify(printStream).println(contains("FormattedTimeString"));
     }
 
     @Test
     public void shouldDisplayFormattedTimeWhenItIsAnEmptyString() {
-
-        // implement me
+//        List<String> books = new ArrayList<>();
+//        PrintStream printStream = mock(PrintStream.class);
+//        DateTime time = new DateTime();
+//        DateTimeFormatter dateTimeFormatter = mock(DateTimeFormatter.class);
+//
+//        when(dateTimeFormatter.print(time)).thenReturn("FormattedTimeString");
+//
+//        Library library = new Library(books, printStream, dateTimeFormatter);
+//        library.welcome(time);
+//
+//        verify(printStream).println(contains("FormattedTimeString"));
     }
 }
