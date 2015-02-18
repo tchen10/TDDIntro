@@ -18,6 +18,9 @@ public class Library {
     }
 
     public void listBooks() {
+        if (books.isEmpty()) {
+            printStream.println();
+        }
         for (String book : books) {
             printStream.println(book);
         }

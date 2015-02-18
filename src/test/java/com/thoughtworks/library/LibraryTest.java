@@ -39,25 +39,25 @@ public class LibraryTest {
     public void shouldPrintNothingWhenThereAreNoBooks() {
 
         List<String> books = new ArrayList<>();
-        books.add("");
         PrintStream printStream = mock(PrintStream.class);
         Library library = new Library(books, printStream, null);
 
         library.listBooks();
-        verify(printStream).println("");
+        verify(printStream).println();
 
     }
 
     @Test
     public void shouldPrintBothBookTitlesWhenThereAreTwoBooks() {
         List<String> books = new ArrayList<>();
-        books.add("Book Title");
-        books.add("Book Title");
+        books.add("Book Title One");
+        books.add("Book Title Two");
         PrintStream printStream = mock(PrintStream.class);
         Library library = new Library(books, printStream, null);
 
         library.listBooks();
-        verify(printStream, times(2)).println("Book Title");
+        verify(printStream).println("Book Title One");
+        verify(printStream).println("Book Title Two");
     }
 
     /*
@@ -106,7 +106,6 @@ public class LibraryTest {
         PrintStream printStream = mock(PrintStream.class);
         DateTime time = null;
         DateTimeFormatter dateTimeFormatter = mock(DateTimeFormatter.class);
-
         when(dateTimeFormatter.print(time)).thenReturn("FormattedTimeString");
 
         Library library = new Library(books, printStream, dateTimeFormatter);
