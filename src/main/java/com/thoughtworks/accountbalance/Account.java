@@ -7,16 +7,19 @@ public class Account {
         this.balance = balance;
     }
 
-    public Integer deposit (int deposit) {
+    public void deposit (int deposit) {
         balance += deposit;
-        return balance;
     }
 
-    public Integer withdraw (int withdrawal) {
+    public void withdraw (int withdrawal) {
         if (balance > withdrawal) {
             balance -= withdrawal;
         }
+    }
+
+    public int getBalance() {
         return balance;
     }
+
 
 }

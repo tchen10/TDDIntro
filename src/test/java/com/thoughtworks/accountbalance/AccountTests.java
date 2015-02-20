@@ -9,14 +9,16 @@ public class AccountTests {
     @Test
     public void shouldIncreaseMyBalanceWhenIDepositMoney() {
         Account account = new Account(100);
-        int result = account.deposit(50);
+        account.deposit(50);
+        int result = account.getBalance();
         assertThat(result, is(150));
     }
 
     @Test
     public void shouldDecreaseMyBalanceWhenIWithdrawMoney(){
         Account account = new Account(100);
-        int result = account.withdraw(50);
+        account.withdraw(50);
+        int result = account.getBalance();
         assertThat(result, is(50));
 
     }
@@ -24,7 +26,8 @@ public class AccountTests {
     @Test
     public void shouldNotDecreaseMyBalanceWhenIWithdrawMoneyAndDoNotHaveEnoughToCoverTheWithdrawal(){
         Account account = new Account(50);
-        int result = account.withdraw(100);
+        account.withdraw(100);
+        int result = account.getBalance();
         assertThat(result, is(50));
     }
 }
