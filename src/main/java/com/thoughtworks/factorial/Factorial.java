@@ -6,12 +6,8 @@ public class Factorial {
             return 1;
         }
         if (i >= 1) {
-            int answer = 1;
-            for (int num = 0; num < i; num++) {
-                answer = answer * i;
-                i--;
-            }
-            return answer;
+            if (i == 1) return 1;
+            return i * compute(i-1);
         }
         if (i < 0) {
             throw new IllegalArgumentException("Must be a positive number.");
